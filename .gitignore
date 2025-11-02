@@ -78,4 +78,10 @@ build/
 # FVM Version Cache
 .fvm/
 
+# Other
+*.cc
+*.h
+*.cmake
+*.swift
+
 pubspec.lock
