@@ -24,6 +24,7 @@ export 'widget_extensions/opacity_extension.dart';
 export 'widget_extensions/padding_extension.dart';
 export 'widget_extensions/positioned_extension.dart';
 export 'widget_extensions/shimmer_extension.dart';
+export 'widget_extensions/skeletonizer_extension.dart';
 export 'widget_extensions/sliver_extension.dart';
 export 'widget_extensions/tooltip_extension.dart';
 export 'widgets/avatar_image.dart';
