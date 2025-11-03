@@ -27,7 +27,7 @@ class ColorPaletteExtractor {
     final colors = await fromImage(imageProvider);
     final dominant = colors['dominant']!;
     final secondary =
-        colors['vibrant'] ?? colors['muted'] ?? dominant.withOpacity(0.8);
+        colors['vibrant'] ?? colors['muted'] ?? dominant.withValues(alpha: 0.8);
 
     return LinearGradient(
       begin: Alignment.bottomLeft,
