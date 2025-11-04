@@ -30,4 +30,5 @@ export 'widget_extensions/skeletonizer_extension.dart';
 export 'widget_extensions/sliver_extension.dart';
 export 'widget_extensions/tooltip_extension.dart';
 export 'widget_extensions/tilt_extension.dart';
+export 'widget_extensions/bounceable_extension.dart';
 export 'widgets/avatar_image.dart';
