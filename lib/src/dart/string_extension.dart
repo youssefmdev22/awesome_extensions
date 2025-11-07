@@ -1,3 +1,5 @@
+import 'package:sprintf/sprintf.dart';
+
 extension StringExtension on String {
   /// Capitalize each word inside string
   ///
@@ -117,4 +119,6 @@ extension StringExtension on String {
   bool hasMatch(String pattern) => RegExp(pattern).hasMatch(this);
 
   String ifIsEmpty(String fallback) => isEmpty ? fallback : this;
+
+  String format(dynamic arguments) => sprintf(this, arguments);
 }
