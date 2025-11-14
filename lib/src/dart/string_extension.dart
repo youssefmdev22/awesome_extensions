@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:sprintf/sprintf.dart';
 
 extension StringExtension on String {
@@ -121,4 +123,9 @@ extension StringExtension on String {
   String ifIsEmpty(String fallback) => isEmpty ? fallback : this;
 
   String format(dynamic arguments) => sprintf(this, arguments);
+
+  Color? parseHexColor() {
+    if (!isHexColor) return null;
+    return Color(int.parse(substring(1, 7), radix: 16) + 0xFF000000);
+  }
 }
