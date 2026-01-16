@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 extension PaddingX on Widget {
   Padding paddingAll(double value, {Key? key}) =>
-      Padding(key: key, padding: EdgeInsets.all(value), child: this);
+      Padding(key: key, padding: .all(value), child: this);
 
   Padding paddingFromViewPadding(
     ViewPadding padding,
@@ -12,7 +12,7 @@ extension PaddingX on Widget {
     Key? key,
   }) => Padding(
     key: key,
-    padding: EdgeInsets.fromViewPadding(padding, devicePixelRatio),
+    padding: .fromViewPadding(padding, devicePixelRatio),
     child: this,
   );
 
@@ -24,7 +24,7 @@ extension PaddingX on Widget {
     Key? key,
   }) => Padding(
     key: key,
-    padding: EdgeInsets.fromLTRB(left, top, right, bottom),
+    padding: .fromLTRB(left, top, right, bottom),
     child: this,
   );
 
@@ -36,12 +36,7 @@ extension PaddingX on Widget {
     Key? key,
   }) => Padding(
     key: key,
-    padding: EdgeInsets.only(
-      top: top,
-      left: left,
-      bottom: bottom,
-      right: right,
-    ),
+    padding: .only(top: top, left: left, bottom: bottom, right: right),
     child: this,
   );
 
@@ -51,19 +46,19 @@ extension PaddingX on Widget {
     Key? key,
   }) => Padding(
     key: key,
-    padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
+    padding: .symmetric(vertical: vertical, horizontal: horizontal),
     child: this,
   );
 
   Padding paddingHorizontal(double value, {Key? key}) => Padding(
     key: key,
-    padding: EdgeInsets.symmetric(horizontal: value),
+    padding: .symmetric(horizontal: value),
     child: this,
   );
 
   Padding paddingVertical(double value, {Key? key}) => Padding(
     key: key,
-    padding: EdgeInsets.symmetric(vertical: value),
+    padding: .symmetric(vertical: value),
     child: this,
   );
 

@@ -18,21 +18,21 @@ class AvatarExample extends StatelessWidget {
                   backgroundImage: NetworkImage(
                     'https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg',
                   ),
-                  shape: AvatarImageShape.circle,
+                  shape: .circle,
                 ),
                 10.0.widthBox,
                 const AvatarImage(
                   backgroundImage: NetworkImage(
                     'https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg',
                   ),
-                  shape: AvatarImageShape.square,
+                  shape: .square,
                 ),
                 10.0.widthBox,
                 const AvatarImage(
                   backgroundImage: NetworkImage(
                     'https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg',
                   ),
-                  shape: AvatarImageShape.standard,
+                  shape: .standard,
                 ),
               ],
             ),
@@ -45,19 +45,16 @@ class AvatarExample extends StatelessWidget {
                   backgroundImage: NetworkImage(
                     'https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg',
                   ),
-                  shape: AvatarImageShape.standard,
+                  shape: .standard,
                   size: ImageSize.large,
                   backgroundColor: Colors.red,
                   child: Text('Lucky'),
                 ),
                 10.0.widthBox,
-                const AvatarImage(
-                  shape: AvatarImageShape.standard,
-                  child: Text('JP'),
-                ),
+                const AvatarImage(shape: .standard, child: Text('JP')),
                 10.0.widthBox,
                 const AvatarImage(
-                  shape: AvatarImageShape.circle,
+                  shape: .circle,
                   backgroundColor: Colors.red,
                   child: Text('JP'),
                   // borderRadius: BorderRadius.circular(10),

@@ -19,7 +19,7 @@ class ShimmerEffectState extends State<ShimmerEffectExample> {
   }
 
   void addData() {
-    Future.delayed(const Duration(seconds: 10), () {
+    Future.delayed(const .new(seconds: 10), () {
       _events.add(0);
     });
   }
