@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.0] - 2026-01-16
+### Changed
+- **Dot Shorthand Refactor**: Refactored the entire codebase (both library and example project) to utilize Dart's "dot shorthand" feature for constructors, static methods, and enums.
+- **Minimum SDK Update**: Increased minimum SDK requirements to Dart 3.10.0 and Flutter 3.38.0 to support the dot shorthand feature.
+
 ## [2.0.26] - 2025-09-14
 ### Added
 - **Map Extensions**: Added a comprehensive set of `Map` extensions for advanced data manipulation, including safe access (`getOrDefault`), filtering (`filterKeys`, `filterValues`), transformation (`toQueryString`), and nested map operations (`getNested`, `setNested`).

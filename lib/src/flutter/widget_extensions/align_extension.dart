@@ -7,7 +7,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.bottomCenter,
+    alignment: .bottomCenter,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -19,7 +19,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.bottomLeft,
+    alignment: .bottomLeft,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -31,7 +31,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.bottomRight,
+    alignment: .bottomRight,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -40,7 +40,7 @@ extension AlignExtensions on Widget {
   Align alignAtCenter({Key? key, double? heightFactor, double? widthFactor}) =>
       Align(
         key: key,
-        alignment: Alignment.center,
+        alignment: .center,
         heightFactor: heightFactor,
         widthFactor: widthFactor,
         child: this,
@@ -52,7 +52,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.centerLeft,
+    alignment: .centerLeft,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -64,7 +64,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.centerRight,
+    alignment: .centerRight,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -79,7 +79,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.lerp(a, b, t)!,
+    alignment: .lerp(a, b, t)!,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -91,7 +91,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.topCenter,
+    alignment: .topCenter,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,
@@ -100,7 +100,7 @@ extension AlignExtensions on Widget {
   Align alignAtTopLeft({Key? key, double? heightFactor, double? widthFactor}) =>
       Align(
         key: key,
-        alignment: Alignment.topLeft,
+        alignment: .topLeft,
         heightFactor: heightFactor,
         widthFactor: widthFactor,
         child: this,
@@ -112,7 +112,7 @@ extension AlignExtensions on Widget {
     double? widthFactor,
   }) => Align(
     key: key,
-    alignment: Alignment.topRight,
+    alignment: .topRight,
     heightFactor: heightFactor,
     widthFactor: widthFactor,
     child: this,

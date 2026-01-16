@@ -4,18 +4,15 @@ import 'package:flutter/widgets.dart';
 extension AsyncSnapshotExt<T> on AsyncSnapshot<T> {
   /// Check if the [AsyncSnapshot] has data.
   bool get hasData =>
-      connectionState == ConnectionState.active ||
-      connectionState == ConnectionState.done && data != null;
+      connectionState == .active || connectionState == .done && data != null;
 
   /// Check if the [AsyncSnapshot] has an error.
 
   bool get hasError =>
-      (connectionState == ConnectionState.active ||
-          connectionState == ConnectionState.done) &&
-      error != null;
+      (connectionState == .active || connectionState == .done) && error != null;
 
   /// Check if the [AsyncSnapshot] is still waiting for data.
-  bool get isLoading => connectionState == ConnectionState.waiting;
+  bool get isLoading => connectionState == .waiting;
 
   ///  **Perform conditional actions based on the state of the [AsyncSnapshot].**
   ///
@@ -57,21 +54,21 @@ extension AsyncSnapshotExt<T> on AsyncSnapshot<T> {
     required R Function() loading,
   }) {
     switch (connectionState) {
-      case ConnectionState.none:
+      case .none:
         if (this.data is T) {
           return data!(this.data as T, true);
         } else {
           return loading();
         }
-      case ConnectionState.waiting:
+      case .waiting:
         return loading();
-      case ConnectionState.active:
+      case .active:
         if (hasError) {
           return error(this.error!, stackTrace);
         } else {
           return data!(this.data as T, false);
         }
-      case ConnectionState.done:
+      case .done:
         if (hasError) {
           return error(this.error!, stackTrace!);
         } else {
@@ -122,21 +119,21 @@ extension AsyncSnapshotExt<T> on AsyncSnapshot<T> {
     required R Function() loading,
   }) {
     switch (connectionState) {
-      case ConnectionState.none:
+      case .none:
         if (this.data is T) {
           return data(this.data as T, true);
         } else {
           return loading();
         }
-      case ConnectionState.waiting:
+      case .waiting:
         return loading();
-      case ConnectionState.active:
+      case .active:
         if (hasError) {
           return error(this.error!, stackTrace);
         } else {
           return data(this.data as T, false);
         }
-      case ConnectionState.done:
+      case .done:
         if (hasError) {
           return error(this.error!, stackTrace!);
         } else {

@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 
 extension StyledText<T extends Text> on T {
   T bold() =>
-      copyWith(
-            style: (style ?? const TextStyle()).copyWith(
-              fontWeight: FontWeight.bold,
-            ),
-          )
-          as T;
+      copyWith(style: (style ?? const .new()).copyWith(fontWeight: .bold)) as T;
 
   Text copyWith({
     String? data,
@@ -24,7 +19,7 @@ extension StyledText<T extends Text> on T {
     TextWidthBasis? textWidthBasis,
     TextHeightBehavior? textHeightBehavior,
     Color? selectionColor,
-  }) => Text(
+  }) => .new(
     data ?? this.data ?? "",
     style: style ?? this.style,
     strutStyle: strutStyle ?? this.strutStyle,
@@ -43,7 +38,7 @@ extension StyledText<T extends Text> on T {
 
   T textStyle(TextStyle? style) =>
       copyWith(
-            style: (this.style ?? const TextStyle()).copyWith(
+            style: (this.style ?? const .new()).copyWith(
               background: style?.background,
               backgroundColor: style?.backgroundColor,
               color: style?.color,
@@ -89,7 +84,7 @@ extension StyledText<T extends Text> on T {
     TextWidthBasis? textWidthBasis,
     TextHeightBehavior? textHeightBehavior,
     Color? selectionColor,
-  }) => Text.rich(
+  }) => .rich(
     textSpan ?? this.textSpan!,
     style: style ?? this.style,
     strutStyle: strutStyle ?? this.strutStyle,
@@ -109,51 +104,36 @@ extension StyledText<T extends Text> on T {
   );
 
   T fontFamily(String font) =>
-      copyWith(style: (style ?? const TextStyle()).copyWith(fontFamily: font))
-          as T;
+      copyWith(style: (style ?? const .new()).copyWith(fontFamily: font)) as T;
 
   T fontSize(double size) =>
-      copyWith(style: (style ?? const TextStyle()).copyWith(fontSize: size))
-          as T;
+      copyWith(style: (style ?? const .new()).copyWith(fontSize: size)) as T;
 
   T fontWeight(FontWeight fontWeight) =>
-      copyWith(
-            style: (style ?? const TextStyle()).copyWith(
-              fontWeight: fontWeight,
-            ),
-          )
+      copyWith(style: (style ?? const .new()).copyWith(fontWeight: fontWeight))
           as T;
 
   T italic() =>
-      copyWith(
-            style: (style ?? const TextStyle()).copyWith(
-              fontStyle: FontStyle.italic,
-            ),
-          )
+      copyWith(style: (style ?? const .new()).copyWith(fontStyle: .italic))
           as T;
 
   T letterSpacing(double space) =>
-      copyWith(
-            style: (style ?? const TextStyle()).copyWith(letterSpacing: space),
-          )
+      copyWith(style: (style ?? const .new()).copyWith(letterSpacing: space))
           as T;
 
   T height(double height) =>
-      copyWith(style: (style ?? const TextStyle()).copyWith(height: height))
-          as T;
+      copyWith(style: (style ?? const .new()).copyWith(height: height)) as T;
 
   T textAlignment(TextAlign align) => copyWith(textAlign: align) as T;
 
   T textBaseline(TextBaseline textBaseline) =>
       copyWith(
-            style: (style ?? const TextStyle()).copyWith(
-              textBaseline: textBaseline,
-            ),
+            style: (style ?? const .new()).copyWith(textBaseline: textBaseline),
           )
           as T;
 
   T textColor(Color color) =>
-      copyWith(style: (style ?? const TextStyle()).copyWith(color: color)) as T;
+      copyWith(style: (style ?? const .new()).copyWith(color: color)) as T;
 
   T textDirection(TextDirection direction) =>
       copyWith(textDirection: direction) as T;
@@ -163,12 +143,12 @@ extension StyledText<T extends Text> on T {
   T textShadow({
     Color color = const Color(0x34000000),
     double blurRadius = 0.0,
-    Offset offset = Offset.zero,
+    Offset offset = .zero,
   }) =>
       copyWith(
-            style: (style ?? const TextStyle()).copyWith(
+            style: (style ?? const .new()).copyWith(
               shadows: [
-                Shadow(color: color, blurRadius: blurRadius, offset: offset),
+                .new(color: color, blurRadius: blurRadius, offset: offset),
               ],
             ),
           )
@@ -178,14 +158,10 @@ extension StyledText<T extends Text> on T {
       copyWith(textWidthBasis: textWidthBasis) as T;
 
   T withUnderLine() =>
-      copyWith(
-            style: (style ?? const TextStyle()).copyWith(
-              decoration: TextDecoration.underline,
-            ),
-          )
+      copyWith(style: (style ?? const .new()).copyWith(decoration: .underline))
           as T;
 
   T wordSpacing(double space) =>
-      copyWith(style: (style ?? const TextStyle()).copyWith(wordSpacing: space))
+      copyWith(style: (style ?? const .new()).copyWith(wordSpacing: space))
           as T;
 }

@@ -40,7 +40,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-  DateTime dateTime = DateTime.now();
+  DateTime dateTime = .now();
 
   @override
   Widget build(BuildContext context) {

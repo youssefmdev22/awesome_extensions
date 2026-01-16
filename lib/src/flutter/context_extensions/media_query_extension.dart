@@ -15,7 +15,7 @@ extension MediaQueryExt on BuildContext {
   double get height => mediaQuerySize.height;
 
   /// check if device is on landscape mode
-  bool get isLandscape => orientation == Orientation.landscape;
+  bool get isLandscape => orientation == .landscape;
 
   /// True if the shortestSide is largest than 720p
   bool get isLargeTablet => (mediaQueryShortestSide >= 720);
@@ -24,7 +24,7 @@ extension MediaQueryExt on BuildContext {
   bool get isPhone => (mediaQueryShortestSide < 600);
 
   /// check if device is on portrait mode
-  bool get isPortrait => orientation == Orientation.portrait;
+  bool get isPortrait => orientation == .portrait;
 
   /// True if the shortestSide is largest than 600p
   bool get isSmallTablet => (mediaQueryShortestSide >= 600);

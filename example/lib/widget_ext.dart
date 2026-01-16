@@ -28,7 +28,7 @@ class WidgetExt extends StatelessWidget {
           const Text('Hello World').bold().fontSize(25).italic(),
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: .center,
             children: <Widget?>[
               Container(
                 height: 100,
@@ -44,7 +44,7 @@ class WidgetExt extends StatelessWidget {
           ),
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: .center,
             children: [
               const Text('Hello').paddingAll(5),
               const Text('World').paddingAll(5),
