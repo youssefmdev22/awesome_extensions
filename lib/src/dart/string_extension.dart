@@ -128,4 +128,19 @@ extension StringExtension on String {
     if (!isHexColor) return null;
     return Color(int.parse(substring(1, 7), radix: 16) + 0xFF000000);
   }
+
+  /// Convert a country code to a flag emoji
+  /// Example: "JO" -> "🇯🇴"
+  /// Example: "US" -> "🇺🇸"
+  /// Example: "AE" -> "🇦🇪"
+  /// Example: "SA" -> "🇸🇦"
+  /// Example: "EG" -> "🇪🇬"
+  /// Example: "SA" -> "🇸🇦"
+  String toFlagEmoji() {
+    if (length != 2) return this;
+    final upperCase = toUpperCase();
+    const base = 0x1F1E6;
+    return String.fromCharCode(base + upperCase.codeUnitAt(0) - 65) +
+        String.fromCharCode(base + upperCase.codeUnitAt(1) - 65);
+  }
 }
